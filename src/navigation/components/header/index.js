@@ -18,13 +18,13 @@ export default class header extends Component {
     return (
       <View style={styles.container}>
 
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('DrawerOpen')} >
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Drawer')} >
           <Icon name="bars" size={fonts.regular} color={colors.white} />
         </TouchableOpacity>
 
         <Text style={styles.title}>{this.props.defaultTitle}</Text>
 
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('DrawerOpen')}>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Drawer')}>
           <Icon name="shopping-cart" size={fonts.regular} color={colors.white} />
         </TouchableOpacity>
 

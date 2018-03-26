@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
 import App from './src';
 
-AppRegistry.registerComponent('reactNativeInit', () => App);
+AppRegistry.registerComponent('quiz', () => App);

@@ -10,4 +10,6 @@ export default {
   background: '#F5F5F5',
   success: '#9DCA83',
   danger: '#E37A7A',
+
+  blue: '#00d2e3',
 };

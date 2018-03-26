@@ -15,14 +15,21 @@ import Home from 'pages/home';
 import Page1 from 'pages/page1';
 import Page2 from 'pages/page2';
 
+import Settings from 'pages/settings';
+import Quiz from 'pages/quiz';
+import Quest from 'pages/quest';
+
 
 const Stack = StackNavigator({
   Home: { screen: Home },
   Page1: { screen: Page1 },
+  Settings: { screen: Settings },
+  Quiz: { screen: Quiz },
+  Quest: { screen: Quest },
 }, {
   initialRouteName: 'Home',
   navigationOptions: {
-    header: props => <Header {...props} defaultTitle="RN Default by Tarnaph" />,
+    header: props => <Header {...props} defaultTitle="Quizes" />,
   },
   transitionConfig: () => ({
     transitionSpec: {
@@ -39,19 +46,19 @@ const Drawer = DrawerNavigator({
   },
 }, {
   contentComponent: props => <Bugger {...props} />,
-  drawerWidth: 300,
+  drawerWidth: 250,
 });
 
 
-const Tab = TabNavigator({
-  Home: { screen: Drawer },
-  Page2: { screen: Page2 },
-}, {
-  swipeEnabled: false,
-  animationEnabled: false,
-  lazy: false,
-  tabBarPosition: 'bottom',
-  tabBarComponent: props => <Footer {...props} />,
-});
+// const Tab = TabNavigator({
+//   Home: { screen: Drawer },
+//   Page2: { screen: Page2 },
+// }, {
+//   swipeEnabled: false,
+//   animationEnabled: false,
+//   lazy: false,
+//   tabBarPosition: 'bottom',
+//   tabBarComponent: props => <Footer {...props} />,
+// });
 
-export default Tab;
+export default Drawer;

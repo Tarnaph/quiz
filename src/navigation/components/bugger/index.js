@@ -2,26 +2,70 @@
 import React, { Component } from 'react';
 
 /* Presentational */
-import { View, Text, TouchableOpacity, SafeAreaView, StatusBar } from 'react-native';
+import { View, Text, TouchableOpacity, SafeAreaView, StatusBar, Image } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-import { colors } from 'styles';
-
+/* Styles */
+import { colors, fonts } from 'styles';
 import styles from './styles';
 
 export default class Menu extends Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <StatusBar
-          barStyle="light-content"
-          backgroundColor={colors.darker}
-        />
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('Home')}>
-          <Text style={styles.link}> Home </Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('Page1')}>
-          <Text style={styles.link}> Link 1</Text>
-        </TouchableOpacity>
+        <View style={styles.topContainer}>
+          <View>
+            <Image style={styles.avatar} source={{uri: 'https://0.soompi.io/wp-content/uploads/2018/01/11014049/IU-2.jpg'}} />
+          </View>
+          <View style={styles.nameContainer}>
+            <Text style={styles.name}>Hanna Fields</Text>
+          </View>
+          <View style={styles.coinsContainer}>
+            <Text style={styles.coinsTitle}>2.38784</Text>
+            <Text style={styles.coinsSub}>
+              Coins
+            </Text>
+          </View>
+        </View>
+
+        <View>
+          <TouchableOpacity style={[styles.iconContainer,styles.active]} onPress={() => this.props.navigation.navigate('Quiz')}>
+            <Icon name="align-left" style={styles.logoIcon} />
+            <Text style={styles.link}> Quizes </Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={[styles.iconContainer]} onPress={() => this.props.navigation.navigate('Quest')}>
+            <Icon name="align-left" style={styles.logoIcon} />
+            <Text style={styles.link}> Quests </Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.iconContainer} onPress={() => this.props.navigation.navigate('Page1')}>
+            <Icon name="address-book" style={styles.logoIcon} />
+            <Text style={styles.link}> My Chats</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.iconContainer} onPress={() => this.props.navigation.navigate('Page1')}>
+            <Icon name="star" style={styles.logoIcon} />
+            <Text style={styles.link}> Leaderboard</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.iconContainer} onPress={() => this.props.navigation.navigate('Page1')}>
+            <Icon name="bell" style={styles.logoIcon} />
+            <Text style={styles.link}> Notifications</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.iconContainer} onPress={() => this.props.navigation.navigate('Page1')}>
+            <Icon name="money" style={styles.logoIcon} />
+            <Text style={styles.link}> Earn Coins</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.iconContainer} onPress={() => this.props.navigation.navigate('Settings')}>
+            <Icon name="cog" style={styles.logoIcon} />
+            <Text style={styles.link}> Settings</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.iconContainer} onPress={() => this.props.navigation.navigate('Page1')}>
+            <Icon name="sign-out" style={styles.logoIcon} />
+            <Text style={styles.link}> LogOut</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.bottomContainer}>
+          <Text style={styles.bottomTitle}>raphaelmorales.com</Text>
+        </View>
       </SafeAreaView>
     );
   }
