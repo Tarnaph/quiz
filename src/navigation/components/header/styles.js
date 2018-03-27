@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     paddingVertical: metrics.smallMargin,
     paddingHorizontal: metrics.baseMargin,
     height: metrics.navBarHeight,
-
+    elevation: 10,
   },
 
   title: {

@@ -5,21 +5,18 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: colors.darker,
-		padding: metrics.basePadding,
+		justifyContent: 'center',
+		alignItems: 'center',
 	},
 
-	topContainer: {
+	scroll: {
 
 	},
 
-	bottomContainer: {
-		marginTop: metrics.basePadding,
-	},
-
-	title: {
-		fontSize: fonts.big,
-		fontWeight: 'bold',
-		color: colors.light,
+	containerScroll: {
+		flexDirection: 'row',
+		justifyContent: 'center',
+		alignItems: 'center',
 	},
 });
 

@@ -22,9 +22,9 @@ const styles = StyleSheet.create({
 	title: {
 		fontSize: fonts.big,
 		fontWeight: 'bold',
-		color: colors.regular,
+		color: colors.white,
 		position: 'absolute',
-		top: 0,
+		top: 20,
 	},
 });
 

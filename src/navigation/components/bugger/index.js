@@ -29,35 +29,23 @@ export default class Menu extends Component {
         </View>
 
         <View>
-          <TouchableOpacity style={[styles.iconContainer,styles.active]} onPress={() => this.props.navigation.navigate('Quiz')}>
+          <TouchableOpacity style={[styles.iconContainer,styles.active]} onPress={() => this.props.navigation.navigate('Home')}>
             <Icon name="align-left" style={styles.logoIcon} />
             <Text style={styles.link}> Quizes </Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={[styles.iconContainer]} onPress={() => this.props.navigation.navigate('Result')}>
+            <Icon name="align-left" style={styles.logoIcon} />
+            <Text style={styles.link}> Result </Text>
           </TouchableOpacity>
           <TouchableOpacity style={[styles.iconContainer]} onPress={() => this.props.navigation.navigate('Quest')}>
             <Icon name="align-left" style={styles.logoIcon} />
             <Text style={styles.link}> Quests </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.iconContainer} onPress={() => this.props.navigation.navigate('Page1')}>
-            <Icon name="address-book" style={styles.logoIcon} />
-            <Text style={styles.link}> My Chats</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.iconContainer} onPress={() => this.props.navigation.navigate('Page1')}>
-            <Icon name="star" style={styles.logoIcon} />
-            <Text style={styles.link}> Leaderboard</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.iconContainer} onPress={() => this.props.navigation.navigate('Page1')}>
-            <Icon name="bell" style={styles.logoIcon} />
-            <Text style={styles.link}> Notifications</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.iconContainer} onPress={() => this.props.navigation.navigate('Page1')}>
-            <Icon name="money" style={styles.logoIcon} />
-            <Text style={styles.link}> Earn Coins</Text>
-          </TouchableOpacity>
           <TouchableOpacity style={styles.iconContainer} onPress={() => this.props.navigation.navigate('Settings')}>
             <Icon name="cog" style={styles.logoIcon} />
             <Text style={styles.link}> Settings</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.iconContainer} onPress={() => this.props.navigation.navigate('Page1')}>
+          <TouchableOpacity style={styles.iconContainer} onPress={() => this.props.navigation.navigate('Settings')}>
             <Icon name="sign-out" style={styles.logoIcon} />
             <Text style={styles.link}> LogOut</Text>
           </TouchableOpacity>

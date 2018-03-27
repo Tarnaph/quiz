@@ -29,11 +29,11 @@ const styles = StyleSheet.create({
 
 	question: {
 		position: 'absolute',
-		top: 0,
+		top: 20,
 		alignSelf: 'center',
 		fontSize: fonts.regular,
 		fontWeight: 'bold',
-		color: colors.dark,
+		color: colors.danger,
 	}
 });
 

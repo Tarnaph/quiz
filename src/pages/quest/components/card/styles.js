@@ -4,7 +4,8 @@ import { general, colors, fonts, metrics } from 'styles';
 const styles = StyleSheet.create({
 	container: {
 		borderWidth: 1,
-		borderColor: colors.regular,
+		borderColor: colors.dark,
+		backgroundColor: colors.dark,
 		borderRadius: metrics.baseRadius,
 		minHeight: 60,
 		width: '100%',

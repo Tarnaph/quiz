@@ -3,13 +3,13 @@ export default {
   lighter: '#EEE',
   light: '#DDD',
   regular: '#999',
-  dark: '#666',
-  darker: '#333',
+  dark: '#4f535e',
+  darker: '#3c4252',
   black: '#000',
 
   background: '#F5F5F5',
   success: '#9DCA83',
   danger: '#E37A7A',
 
-  blue: '#00d2e3',
+  blue: '#00dfda',
 };

@@ -11,33 +11,29 @@ import Header from 'navigation/components/header';
 import Bugger from 'navigation/components/bugger';
 
 /* Pages */
-import Home from 'pages/home';
-import Page1 from 'pages/page1';
-import Page2 from 'pages/page2';
-
 import Settings from 'pages/settings';
-import Quiz from 'pages/quiz';
+import Home from 'pages/quiz';
 import Quest from 'pages/quest';
+import Result from 'pages/result';
 
 
 const Stack = StackNavigator({
-  Home: { screen: Home },
-  Page1: { screen: Page1 },
   Settings: { screen: Settings },
-  Quiz: { screen: Quiz },
+  Home: { screen: Home },
   Quest: { screen: Quest },
+  Result: { screen: Result },
 }, {
   initialRouteName: 'Home',
   navigationOptions: {
     header: props => <Header {...props} defaultTitle="Quizes" />,
   },
-  transitionConfig: () => ({
-    transitionSpec: {
-      duration: 0,
-      timing: Animated.timing,
-      easing: Easing.step0,
-    },
-  }),
+  // transitionConfig: () => ({
+  //   transitionSpec: {
+  //     duration: 0,
+  //     timing: Animated.timing,
+  //     easing: Easing.step0,
+  //   },
+  // }),
 });
 
 const Drawer = DrawerNavigator({
