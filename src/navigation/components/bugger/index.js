@@ -1,6 +1,9 @@
 /* Core */
 import React, { Component } from 'react';
 
+/* Navitation */
+import { NavigationActions } from 'react-navigation';
+
 /* Presentational */
 import { View, Text, TouchableOpacity, SafeAreaView, StatusBar, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -10,6 +13,17 @@ import { colors, fonts } from 'styles';
 import styles from './styles';
 
 export default class Menu extends Component {
+
+  /* Reseta o navigation para a nota de destino */
+  navitagionTo = routeName => (
+    NavigationActions.reset({
+      index: 0,
+      actions: [
+        NavigationActions.navigate({ routeName }),
+      ],
+    })
+  )
+
   render() {
     return (
       <SafeAreaView style={styles.container}>
@@ -29,23 +43,23 @@ export default class Menu extends Component {
         </View>
 
         <View>
-          <TouchableOpacity style={[styles.iconContainer,styles.active]} onPress={() => this.props.navigation.navigate('Home')}>
+          <TouchableOpacity style={[styles.iconContainer,styles.active]} onPress={() => this.props.navigation.dispatch(this.navitagionTo('Home'))}>
             <Icon name="align-left" style={styles.logoIcon} />
             <Text style={styles.link}> Quizes </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.iconContainer]} onPress={() => this.props.navigation.navigate('Result')}>
+          <TouchableOpacity style={[styles.iconContainer]} onPress={() => this.props.navigation.dispatch(this.navitagionTo('Result'))}>
             <Icon name="align-left" style={styles.logoIcon} />
             <Text style={styles.link}> Result </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.iconContainer]} onPress={() => this.props.navigation.navigate('Quest')}>
+          <TouchableOpacity style={[styles.iconContainer]} onPress={() => this.props.navigation.dispatch(this.navitagionTo('Quest'))}>
             <Icon name="align-left" style={styles.logoIcon} />
             <Text style={styles.link}> Quests </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.iconContainer} onPress={() => this.props.navigation.navigate('Settings')}>
+          <TouchableOpacity style={styles.iconContainer} onPress={() => this.props.navigation.dispatch(this.navitagionTo('Settings'))}>
             <Icon name="cog" style={styles.logoIcon} />
             <Text style={styles.link}> Settings</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.iconContainer} onPress={() => this.props.navigation.navigate('Settings')}>
+          <TouchableOpacity style={styles.iconContainer} onPress={() => this.props.navigation.dispatch(this.navitagionTo('Settings'))}>
             <Icon name="sign-out" style={styles.logoIcon} />
             <Text style={styles.link}> LogOut</Text>
           </TouchableOpacity>

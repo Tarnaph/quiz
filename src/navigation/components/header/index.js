@@ -11,22 +11,20 @@ import styles from './styles';
 
 export default class header extends Component {
   componentWillMount() {
-    // console.tron.error(this.props);
+    //console.tron.error(this.props);
   }
 
   render() {
     return (
       <View style={styles.container}>
 
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('Drawer')} >
+        <TouchableOpacity style={styles.nav} onPress={() => this.props.navigation.navigate('DrawerOpen')} >
           <Icon name="bars" size={fonts.regular} color={colors.white} />
         </TouchableOpacity>
 
         <Text style={styles.title}>{this.props.defaultTitle}</Text>
 
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('Drawer')}>
-          <Icon name="shopping-cart" size={fonts.regular} color={colors.white} />
-        </TouchableOpacity>
+        <View  />
 
       </View>
     );

@@ -19,7 +19,7 @@ export default class Card extends Component {
       		<Text style={styles.title}>Art & Design</Text>
       		<Text style={styles.subTitle}>Fusce vehichula dolor arcu, sit amet landi dolor,Fusce vehichula dolor arcu, sit amet landi dolor
       		</Text>
-      		<Btn />
+      		<Btn navigation={this.props.navigation}/>
       	</View>
       </View>
     );

@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
   },
 
   title: {
+    flex: 0.33333,
     fontSize: fonts.regular,
     fontWeight: 'bold',
     color: colors.white,
@@ -21,6 +22,11 @@ const styles = StyleSheet.create({
 
   iconContainer: {
     flexDirection: 'row',
+  },
+
+  nav: {
+    flex: 0.33333,
+
   },
 
 });

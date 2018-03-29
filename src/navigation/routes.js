@@ -48,7 +48,7 @@ const Drawer = DrawerNavigator({
 
 // const Tab = TabNavigator({
 //   Home: { screen: Drawer },
-//   Page2: { screen: Page2 },
+//   asd: { screen: Drawer },
 // }, {
 //   swipeEnabled: false,
 //   animationEnabled: false,

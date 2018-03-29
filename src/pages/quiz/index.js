@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 /* Presentational */
 import { View, Text, ScrollView } from 'react-native';
 
+
 /* Components */
 import Card from './components/card';
 
@@ -11,6 +12,10 @@ import Card from './components/card';
 import styles from './styles';
 
 export default class Quiz extends Component {
+	componentWillMount(){
+		//console.tron.log(this.props);
+	}
+
   render() {
     return (
     	<View style={styles.container}>
@@ -19,10 +24,7 @@ export default class Quiz extends Component {
 	    	<ScrollView style={styles.scroll} horizontal>
 		      <View style={styles.containerScroll}>
 
-		      	<Card />
-		      	<Card />
-		      	<Card />
-		      	<Card />
+		      	<Card navigation={this.props.navigation}/>
 		      </View>
 		     </ScrollView>
 
